@@ -1,9 +1,11 @@
 package com.betrybe.model;
 
 import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "carros")
+@XmlRootElement(name = "carros")
 public class EntityCarro {
 
     @Id

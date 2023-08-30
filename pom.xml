@@ -62,6 +62,15 @@
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-jsonb</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel.quarkus</groupId>
+      <artifactId>camel-quarkus-gson</artifactId>
+      <version>3.0.0-RC2</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -95,6 +104,7 @@
         <configuration>
           <systemPropertyVariables>
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+            <!--suppress UnresolvedMavenProperty -->
             <maven.home>${maven.home}</maven.home>
           </systemPropertyVariables>
         </configuration>
@@ -112,6 +122,7 @@
               <systemPropertyVariables>
                 <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
                 <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+                <!--suppress UnresolvedMavenProperty -->
                 <maven.home>${maven.home}</maven.home>
               </systemPropertyVariables>
             </configuration>
